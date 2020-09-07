@@ -11,7 +11,7 @@
 (function() {
     'use strict';
 
-    const widgetURL = "https://mechanical-ink.github.io/chatinc-1/";
+    const widgetURL = "https://uxwill.github.io/chatinc/";
     const iframe = document.createElement('iframe');
     iframe.src = widgetURL;
 
