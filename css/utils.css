@@ -1,0 +1,23 @@
+/* hides element for everyone except screen readers */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* turn of base button styling */
+.ghost {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+/* hide for everyone */
+.hidden {
+  display: none;
+}

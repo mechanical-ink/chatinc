@@ -1,0 +1,10 @@
+.chat-2-desk-popup-close {
+  background: transparent url("../../assets/close-dialog.svg") 0 0 no-repeat;
+  background-size: 14px;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 300;
+}
