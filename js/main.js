@@ -9,6 +9,7 @@
   }
 
   const closeDialogButton = document.getElementById("close-dialog");
+  const fileUploadButton = document.getElementById("file-upload");
   const showDialogButton = document.getElementById("show-dialog");
 
   /**
@@ -29,6 +30,19 @@
   if (closeDialogButton) {
     closeDialogButton.addEventListener("click", function () {
       toggleState();
+    });
+  }
+
+  if (fileUploadButton) {
+    const fileField = document.getElementById("file-field");
+
+    fileUploadButton.addEventListener("click", function () {
+      fileField.click();
+    });
+
+    fileField.addEventListener("change", function (event) {
+      // fake path, but real filename
+      console.info(event.target.value);
     });
   }
 })();

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Widget-chat2brand Dinamicka</title>
     <link rel="stylesheet" href="./css/utils.css">
+    <link rel="stylesheet" href="./css/atoms/buttons.css">
     <link rel="stylesheet" href="./css/atoms/close-dialog.css">
     <link rel="stylesheet" href="./css/widget.css">
     <link
@@ -43,8 +44,8 @@
                 <div id="answering_lch" style="display: none"></div>
                 <div id="widget-message-area"></div>
             </div>
-            <div id="live-chat-input">
-                <textarea id="message-input-lch"
+            <form id="live-chat-input">
+                <textarea id="message-input-lch" name="message"
                     placeholder="Send a message..."></textarea>
                 <a href="#" id="smiles-lch">
                     <svg width="20" height="20" viewBox="0 0 37 37" fill="none"
@@ -54,14 +55,10 @@
                             fill="#B3B3B3" />
                     </svg>
                 </a>
-                <a href="#" id="attachment-lch">
-                    <svg width="26" height="26" viewBox="0 0 46 46" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M34.5183 20.9813L20.4694 35.0303C18.2133 37.2864 14.6345 37.8146 11.9717 36.057C8.31051 33.6414 7.94439 28.6414 10.876 25.7098L27.6107 8.97512C28.9563 7.62953 31.1233 7.29449 32.6715 8.4023C34.6426 9.81408 34.8074 12.5863 33.1673 14.2264L18.982 28.4118C18.6091 28.7846 18.0025 28.7833 17.631 28.4118C17.2595 28.0403 17.2581 27.4337 17.631 27.0608L29.1144 15.5774C29.8601 14.8316 29.8601 13.6212 29.1144 12.8754C28.3686 12.1297 27.1581 12.1297 26.4124 12.8754L15.1276 24.1602C13.3605 25.9273 13.016 28.809 14.5953 30.7449C16.4097 32.97 19.7061 33.0916 21.6839 31.1137L35.6288 17.1689C38.4497 14.348 38.9158 9.7668 36.3813 6.68655C33.4727 3.15101 28.2187 2.96322 25.0614 6.12048L8.50505 22.6768C4.62637 26.5555 3.98465 32.8525 7.46614 37.0878C11.4624 41.9514 18.6928 42.2108 23.0349 37.8687L37.2203 23.6833C37.966 22.9376 37.966 21.7271 37.2203 20.9813C36.4745 20.2356 35.2641 20.2356 34.5183 20.9813Z"
-                            fill="#B3B3B3" />
-                    </svg>
-                </a>
+                <input type="file" id="file-field" class="visually-hidden" />
+                <button type="button" id="file-upload" class="ghost file-upload">
+                    <span class="visually-hidden">Upload file</span>
+                </button>
                 <a href="#" id="send-btn-lch">
                     <svg width="30" height="30" viewBox="0 0 57 57" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +70,7 @@
                 <div class="copy_lch">
                     Delivered to you by <a href="#" target="_blank">ChatInc</a>.
                 </div>
-            </div>
+            </form>
         </div>
         <button type="button" id="show-dialog" class="ghost chat-2-desk-popup-show">
             <svg width="102" height="102" fill="none" xmlns="http://www.w3.org/2000/svg"
