@@ -1,0 +1,21 @@
+.file-upload {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+}
+
+.file-upload::before {
+  display: inline-block;
+  content: "";
+  background: transparent url("../../assets/attachment.svg") 0 0 no-repeat;
+  background-size: 24px;
+  height: 24px;
+  width: 24px;
+}
+
+/* turn of base button styling */
+.ghost {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
