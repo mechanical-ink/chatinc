@@ -1,4 +1,36 @@
 .chat-2-desk-popup-show {
-  height: 102px;
-  width: 102px;
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  height: 48px;
+  width: 48px;
+}
+
+.chat-2-desk-popup-show svg {
+  height: 48px;
+  width: 48px;
+}
+
+@media all and (min-width: 47.9385em) {
+  .chat-2-desk-popup-show {
+    height: 68px;
+    width: 68px;
+  }
+
+  .chat-2-desk-popup-show svg {
+    height: 68px;
+    width: 68px;
+  }
+}
+
+@media all and (min-width: 74.9375em) {
+  .chat-2-desk-popup-show {
+    height: 102px;
+    width: 102px;
+  }
+
+  .chat-2-desk-popup-show svg {
+    height: 102px;
+    width: 102px;
+  }
 }
