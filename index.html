@@ -3,14 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Widget-chat2brand Dinamicka</title>
-    <link rel="stylesheet" href="./css/utils.css">
-    <link rel="stylesheet" href="./css/atoms/buttons.css">
-    <link rel="stylesheet" href="./css/atoms/close-dialog.css">
-    <link rel="stylesheet" href="./css/widget.css">
+    <link rel="stylesheet" href="./css/reset.css" media="screen" />
+    <link rel="stylesheet" href="./css/utils.css" media="screen" />
+
+    <link rel="stylesheet" href="./css/atoms/buttons.css" media="screen" />
+    <link rel="stylesheet" href="./css/atoms/close-dialog.css" media="screen" />
+    <link rel="stylesheet" href="./css/atoms/show-dialog.css" media="screen" />
+    <link rel="stylesheet" href="./css/atoms/icon-lose.css" media="screen" />
+
+    <link rel="stylesheet" href="./css/molecules/connection-lost.css" media="screen" />
+
+    <link rel="stylesheet" href="./css/emoji-picker.css" media="screen" />
+    <link rel="stylesheet" href="./css/widget.css" media="screen" />
+    <link rel="stylesheet" href="./css/main.css" media="screen" />
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="screen" />
 </head>
 
 <body>
@@ -20,19 +30,12 @@
             <button type="button" id="close-dialog" class="ghost chat-2-desk-popup-close">
                 <span class="visually-hidden">Close dialog</span>
             </button>
-            <div id="head_lch">
+            <div id="head_lch" class="chat-2-desk header">
                 <div class="title_lch">Full House Furniture</div>
                 <div class="sub_title_lch">Typically responds in a few hours.</div>
 
-                <div id="lose_connection_lch">
-                    <div class="icon_lose">
-                        <svg width="6" height="27" viewBox="0 0 6 27" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M1.09754 15.306L0.53325 6.84969C0.428453 5.20519 0.372025 4.02018 0.372025 3.30273C0.372025 2.32732 0.629985 1.5615 1.13784 1.02139C1.65377 0.473225 2.32285 0.199142 3.16122 0.199142C4.17694 0.199142 4.85409 0.545777 5.19266 1.24711C5.53124 1.94844 5.70052 2.9561 5.70052 4.27008C5.70052 5.04396 5.66021 5.83397 5.5796 6.63203L4.82184 15.3301C4.74123 16.37 4.56388 17.16 4.2898 17.7163C4.01572 18.2725 3.57235 18.5466 2.95163 18.5466C2.31479 18.5466 1.87142 18.2806 1.62958 17.7405C1.37968 17.2084 1.20233 16.3942 1.09754 15.306ZM3.05643 26.9142C2.33897 26.9142 1.71019 26.6804 1.17815 26.2209C0.646108 25.7534 0.372025 25.1085 0.372025 24.2701C0.372025 23.5365 0.629985 22.9158 1.13784 22.4079C1.65377 21.892 2.27448 21.6421 3.01612 21.6421C3.75776 21.6421 4.38654 21.9001 4.91052 22.4079C5.4345 22.9158 5.69246 23.5446 5.69246 24.2701C5.69246 25.0923 5.42644 25.7372 4.89439 26.2128C4.37847 26.6804 3.75776 26.9142 3.05643 26.9142Z"
-                                fill="#42CDC9" />
-                        </svg>
-                    </div>
+                <div id="lose_connection_lch" class="connection-lost">
+                    <div class="icon-lose" aria-hidden="true"></div>
                     <p class="message_lose">
                         Hello, thank you for getting in touch. We are currently recharging
                         for
@@ -47,33 +50,30 @@
             <form id="live-chat-input">
                 <textarea id="message-input-lch" name="message"
                     placeholder="Send a message..."></textarea>
-                <a href="#" id="smiles-lch">
-                    <svg width="20" height="20" viewBox="0 0 37 37" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M18.5 0C8.26839 0 0 8.26839 0 18.5C0 28.7316 8.26839 37 18.5 37C28.7316 37 37 28.7316 37 18.5C37 8.26839 28.7316 0 18.5 0ZM18.5 3.08333C27.0815 3.08333 33.9167 9.91846 33.9167 18.5C33.9167 27.0815 27.0815 33.9167 18.5 33.9167C9.91846 33.9167 3.08333 27.0815 3.08333 18.5C3.08333 9.91846 9.91846 3.08333 18.5 3.08333ZM12.3333 12.3333C10.6291 12.3333 9.25 13.7124 9.25 15.4167C9.25 17.1209 10.6291 18.5 12.3333 18.5C14.0376 18.5 15.4167 17.1209 15.4167 15.4167C15.4167 13.7124 14.0376 12.3333 12.3333 12.3333ZM24.6667 12.3333C22.9624 12.3333 21.5833 13.7124 21.5833 15.4167C21.5833 17.1209 22.9624 18.5 24.6667 18.5C26.3709 18.5 27.75 17.1209 27.75 15.4167C27.75 13.7124 26.3709 12.3333 24.6667 12.3333ZM12.0443 22.8841L9.53906 24.6185C11.5083 27.485 14.7723 29.2917 18.5 29.2917C22.2277 29.2917 25.4917 27.485 27.4609 24.6185L24.9557 22.8841C23.5345 24.9497 21.2461 26.2083 18.5 26.2083C15.7539 26.2083 13.4655 24.9497 12.0443 22.8841Z"
-                            fill="#B3B3B3" />
-                    </svg>
-                </a>
+
+                <div id="emojis">
+                    <button type="button" id="emoji-picker" class="ghost emoji-picker">
+                        <span class="visually-hidden">Choose an emoji</span>
+                    </button>
+                </div>
+
+
+
                 <input type="file" id="file-field" class="visually-hidden" />
                 <button type="button" id="file-upload" class="ghost file-upload">
                     <span class="visually-hidden">Upload file</span>
                 </button>
-                <a href="#" id="send-btn-lch">
-                    <svg width="30" height="30" viewBox="0 0 57 57" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M16.9488 12.232L16.9488 23.4948C16.9488 24.6092 17.7945 25.5397 18.9018 25.6458L46.3927 28.2861L18.9033 30.9251C17.7959 31.0311 16.9488 31.9631 16.9502 33.0761L16.9502 44.3389C16.9502 45.92 18.5921 46.9651 20.0247 46.2962L54.4226 30.2434C56.0843 29.467 56.0858 27.1039 54.4226 26.3289L20.0233 10.2747C18.5907 9.6058 16.9488 10.6509 16.9488 12.232Z"
-                            fill="#42CDC9" />
-                    </svg>
-                </a>
+                <button type="submit" id="send-message" class="ghost send-message">
+                    <span class="visually-hidden">Send message</span>
+                </button>
+
                 <div class="copy_lch">
                     Delivered to you by <a href="#" target="_blank">ChatInc</a>.
                 </div>
             </form>
         </div>
         <button type="button" id="show-dialog" class="ghost chat-2-desk-popup-show">
-            <svg width="102" height="102" fill="none" xmlns="http://www.w3.org/2000/svg"
+            <svg viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg"
                 role="img">
                 <title>Show Dialog</title>
                 <circle cx="51" cy="51" r="51" fill="url(#paint0_linear)" />
@@ -95,6 +95,7 @@
         </button>
     </div>
 
+    <script src="js/libs/fgEmojiPicker.js"></script>
     <script src="js/main.js" defer></script>
 </body>
 

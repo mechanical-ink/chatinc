@@ -1,0 +1,13 @@
+.icon-lose::before {
+  background-color: #d7f4f4;
+  border-radius: 50%;
+  content: "!";
+  display: inline-block;
+  color: #41cdc9;
+  font-size: 2rem;
+  height: 48px;
+  line-height: 0;
+  margin-right: 12px;
+  padding: 24px 20px;
+  width: 48px;
+}

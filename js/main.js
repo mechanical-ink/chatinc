@@ -9,6 +9,7 @@
   }
 
   const closeDialogButton = document.getElementById("close-dialog");
+  const emojiPickerButton = document.getElementById("emoji-picker");
   const fileUploadButton = document.getElementById("file-upload");
   const showDialogButton = document.getElementById("show-dialog");
 
@@ -43,6 +44,18 @@
     fileField.addEventListener("change", function (event) {
       // fake path, but real filename
       console.info(event.target.value);
+    });
+  }
+
+  if (emojiPickerButton) {
+    new FgEmojiPicker({
+      trigger: "#emoji-picker",
+      container: ".chat-2-desk-popup-container",
+      dir: "./js/libs/",
+      emit(obj) {
+        const emoji = obj.emoji;
+        document.querySelector("#message-input-lch").value += emoji;
+      },
     });
   }
 })();

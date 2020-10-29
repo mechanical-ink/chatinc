@@ -1,16 +1,31 @@
-.file-upload {
+.emoji-picker,
+.file-upload,
+.send-message {
   display: inline-block;
-  width: 26px;
+  width: 36px;
+  height: 36px;
+}
+
+.file-upload::before,
+.emoji-picker::before,
+.send-message::before {
+  display: inline-block;
+  content: "";
+  background-size: 26px;
   height: 26px;
+  width: 26px;
 }
 
 .file-upload::before {
-  display: inline-block;
-  content: "";
   background: transparent url("../../assets/attachment.svg") 0 0 no-repeat;
-  background-size: 24px;
-  height: 24px;
-  width: 24px;
+}
+
+.emoji-picker::before {
+  background: transparent url("../../assets/smiley.svg") 0 0 no-repeat;
+}
+
+.send-message::before {
+  background: transparent url("../../assets/arrow.svg") 0 0 no-repeat;
 }
 
 /* turn of base button styling */
