@@ -8,21 +8,21 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
-    'use strict';
+(function () {
+  "use strict";
 
-    const widgetURL = "https://mechanical-ink.github.io/chatinc-1/";
-    const iframe = document.createElement('iframe');
-    iframe.src = widgetURL;
+  const widgetURL = "https://mechanical-ink.github.io/chatinc/";
+  const iframe = document.createElement("iframe");
+  iframe.src = widgetURL;
 
-    iframe.style.width = "500px";
-    iframe.style.height = "600px";
-    iframe.style.position = "fixed";
-    iframe.style.bottom = "0";
-    iframe.style.right = "0";
-    iframe.style.border = "0";
-    // ensure the widget is above everything else
-    iframe.style.zIndex = "99999";
+  iframe.style.width = "500px";
+  iframe.style.height = "600px";
+  iframe.style.position = "fixed";
+  iframe.style.bottom = "0";
+  iframe.style.right = "0";
+  iframe.style.border = "0";
+  // ensure the widget is above everything else
+  iframe.style.zIndex = "99999";
 
-    document.documentElement.appendChild(iframe);
+  document.documentElement.appendChild(iframe);
 })();
