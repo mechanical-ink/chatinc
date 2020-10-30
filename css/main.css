@@ -1,0 +1,18 @@
+.chat-2-desk-popup {
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media all and (min-width: 47.9385em) {
+  .chat-2-desk-popup {
+    border-radius: 10px;
+    bottom: 24px;
+    right: 24px;
+    height: 574px;
+    width: 440px;
+  }
+}
